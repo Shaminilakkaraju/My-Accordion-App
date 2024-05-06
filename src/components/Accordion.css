@@ -1,0 +1,117 @@
+body {
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .accordion {
+    width: 500px;
+    margin: 100px auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .accordion-item {
+    border: 1px solid #2567c3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 500px;
+  }
+  
+  .accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .accordion-title:hover {
+    background-color: #e3e3e3;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    max-height: fit-content;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .accordion-content.active {
+    max-height: 500px;
+  }
+  
+  .accordion-title.active {
+    background-color: #ddd;
+    color: #fff;
+  }
+  
+  .accordion-title:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease-out;
+    transform: rotate(0deg);
+  }
+  
+  .accordion-title.active:after {
+    content: "\2796";
+    transform: rotate(45deg);
+  }
+  
+  .accordion-title.active, .accordion-title:hover {
+    background-color: #71a4ec;
+    color: #fff;
+  }
+  
+  .accordion-content.active {
+    background-color: #71a4ec;
+    color: #fff;
+  }
+  
+  .accordion-title:hover .accordion-content {
+    max-height: 800px;
+    background-color: #71a4ec;
+  }
+  
+  .accordion-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .accordion-title, .accordion-content {
+    transition: all 0.3s ease-out;
+  }
+  
+  .accordion-title:focus {
+    outline: none;
+  }
+  
+  .accordion-title:focus .accordion-content {
+    max-height: 800px;
+    background-color: #71a4ec;
+  }
+  
+  .accordion-title:focus .accordion-title {
+    background-color: #71a4ec;
+    color: #fff;
+  }
+  
+  .accordion-title:focus .accordion-title:after {
+    transform: rotate(45deg);
+  }
+
+  .accordion-content:hover {
+    background-color: #71a4ec; 
+    color: #fff;
+  }
